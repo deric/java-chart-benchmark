@@ -18,6 +18,19 @@ First time is measured after initilization of plotting class, second one after d
 
 ## Charts
 
+### Gral
+
+![Grall scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/gral-scatter-1k.png)
+
+### JFree
+
+![JFree scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/jfree-scatter-1k.png)
+
+
+### XChart
+
+![XChart scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/xchart-scatter-1k.png)
+
 ## System
 
 Measured on Linux
