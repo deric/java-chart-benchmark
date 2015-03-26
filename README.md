@@ -4,3 +4,4 @@ The purpose of this repository is to compare plotting libraries available for Ja
 
   * [Gral](http://trac.erichseifert.de/gral/) - release 0.10
   * [XChart](http://xeiam.com/xchart/) - release 2.4.3
+  * [JFreeChart](http://www.jfree.org/) - release 1.0.19
