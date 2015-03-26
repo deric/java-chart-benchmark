@@ -77,14 +77,18 @@ public class GralScatter extends ExamplePanel {
         return String.format("Scatter plot with %d data points", sampleCount);
     }
 
-    public static void main(String[] args) {
+    public static void plot(int sampleSize) {
         long start = System.currentTimeMillis();
-        GralScatter gs = new GralScatter(1000);
+        GralScatter gs = new GralScatter(sampleSize);
         long create = (System.currentTimeMillis() - start);
         System.out.println("gral create = " + create + " ms");
         gs.showInFrame();
         long end = (System.currentTimeMillis() - start);
         System.out.println("gral show = " + end + " ms");
+    }
+
+    public static void main(String[] args) {
+        plot(1000);
     }
 
 }

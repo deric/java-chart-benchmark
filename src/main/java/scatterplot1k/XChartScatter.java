@@ -35,7 +35,11 @@ public class XChartScatter {
     }
 
     public static void main(String[] args) {
-        XChartScatter scatter = new XChartScatter(1000);
+        plot(1000);
+    }
+
+    public static void plot(int sampleSize) {
+        XChartScatter scatter = new XChartScatter(sampleSize);
         long start = System.currentTimeMillis();
         Chart chart = scatter.getChart();
         long create = (System.currentTimeMillis() - start);

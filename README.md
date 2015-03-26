@@ -10,11 +10,11 @@ The purpose of this repository is to compare plotting libraries available for Ja
 
 | Library  | scatter 1k   |  scatter 10k |
 |----------|:------------:|-------------:|
-| Gral     | 647ms/785ms  |              |
-| JFree    | 409ms/480ms  |              |
-| XChart   |  50ms/253ms  |              |
+| Gral     | 647ms/785ms  | 867ms/1028ms |
+| JFree    | 409ms/480ms  |  471ms/522ms |
+| XChart   |  50ms/253ms  |  103ms/313ms |
 
-First time is measured after initilization of plotting class, second one after displaying whole `JFrame`. This times could be very different on different platforms (and versions of Java).
+First time is measured after initilization of plotting class, second one after displaying whole `JFrame`. This times could be very different on different platforms (and versions of Java). Time measurement is not exact and might slightly differ each run, the goal is just to get a rough approximation of rendering speed.
 
 ## Charts
 

@@ -73,9 +73,9 @@ public class JFreeScatter2 extends ApplicationFrame {
         return series;
     }
 
-    public static void main(String[] args) {
+    public static void plot(int sampleSize) {
         long start = System.currentTimeMillis();
-        JFreeScatter2 demo = new JFreeScatter2("gaussian blob", 1000);
+        JFreeScatter2 demo = new JFreeScatter2("gaussian blob", sampleSize);
         long create = (System.currentTimeMillis() - start);
         System.out.println("jfree create = " + create + " ms");
         demo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -84,6 +84,10 @@ public class JFreeScatter2 extends ApplicationFrame {
         demo.setVisible(true);
         long end = (System.currentTimeMillis() - start);
         System.out.println("jfree show = " + end + " ms");
+    }
+
+    public static void main(String[] args) {
+        plot(1000);
     }
 
 }
