@@ -38,9 +38,12 @@ Features:
 ![XChart scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/xchart-scatter-1k.png)
 
 
-### XChart
+### JMathPlot
 
 [Source code](https://github.com/deric/java-chart-benchmark/blob/master/src/main/java/scatterplot1k/JMathScatter.java)
+
+The library is not at Maven, I used a [fork on github](https://github.com/deric/clueminer/tree/master/modules/math-plot) for testing.
+
 ![XChart scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/jmath-scatter-1k.png)
 
 
