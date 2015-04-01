@@ -13,6 +13,7 @@ The purpose of this repository is to compare plotting libraries available for Ja
 | Gral     | 647ms/785ms  | 867ms/1028ms |
 | JFree    | 409ms/480ms  |  471ms/522ms |
 | XChart   |  50ms/253ms  |  103ms/313ms |
+| JMathPlot| 450ms/507ms  |  459ms/532ms |
 
 First time is measured after initilization of plotting class, second one after displaying whole `JFrame`. This times could be very different on different platforms (and versions of Java). Time measurement is not exact and might slightly differ each run, the goal is just to get a rough approximation of rendering speed.
 
@@ -20,6 +21,9 @@ First time is measured after initilization of plotting class, second one after d
 
 ### Gral
 [Source code](https://github.com/deric/java-chart-benchmark/blob/master/src/main/java/scatterplot1k/GralScatter.java)
+Features:
+  * allows zooming
+
 ![Grall scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/gral-scatter-1k.png)
 
 ### JFree
@@ -32,6 +36,13 @@ First time is measured after initilization of plotting class, second one after d
 
 [Source code](https://github.com/deric/java-chart-benchmark/blob/master/src/main/java/scatterplot1k/XChartScatter.java)
 ![XChart scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/xchart-scatter-1k.png)
+
+
+### XChart
+
+[Source code](https://github.com/deric/java-chart-benchmark/blob/master/src/main/java/scatterplot1k/JMathScatter.java)
+![XChart scatterplot](https://raw.githubusercontent.com/deric/java-chart-benchmark/master/images/jmath-scatter-1k.png)
+
 
 ## System
 
