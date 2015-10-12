@@ -13,22 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package scatterplot1k;
+package plot3d;
 
 import java.util.Random;
 import javax.swing.JFrame;
-import org.math.plot.Plot2DPanel;
+import org.math.plot.Plot3DPanel;
 
 /**
  *
  * @author deric
  */
-public class JMathScatter {
+public class JMath3d {
 
-    private final int sampleCount;
-
-    public JMathScatter(int sampleCnt) {
-        this.sampleCount = sampleCnt;
+    public JMath3d() {
     }
 
     public static void main(String[] args) {
@@ -36,15 +33,14 @@ public class JMathScatter {
     }
 
     public static void plot(int sampleSize) {
-
-        JMathScatter plot = new JMathScatter(sampleSize);
+        JMath3d plot = new JMath3d();
         long start = System.currentTimeMillis();
-        Plot2DPanel chart = plot.getChart();
+        Plot3DPanel chart = plot.getChart(sampleSize);
         long create = (System.currentTimeMillis() - start);
         System.out.println("jmath create = " + create + " ms");
 
         // put the PlotPanel in a JFrame like a JPanel
-        JFrame frame = new JFrame("a plot panel");
+        JFrame frame = new JFrame("JMath 3D plot");
         frame.setSize(800, 600);
         frame.setContentPane(chart);
         frame.setVisible(true);
@@ -53,20 +49,21 @@ public class JMathScatter {
         System.out.println("jmath show = " + end + " ms");
     }
 
-    public Plot2DPanel getChart() {
-
-        Plot2DPanel plot = new Plot2DPanel();
+    public Plot3DPanel getChart(int size) {
+        Plot3DPanel plot = new Plot3DPanel();
         Random random = new Random();
 
-        double[] x = new double[sampleCount];
-        double[] y = new double[sampleCount];
+        double[] x = new double[size];
+        double[] y = new double[size];
+        double[] z = new double[size];
 
-        for (int i = 0; i < sampleCount; i++) {
+        for (int i = 0; i < size; i++) {
             x[i] = random.nextGaussian() * 2.0;
             y[i] = random.nextGaussian() * 2.0;
+            z[i] = random.nextGaussian() * 2.0;
         }
 
-        plot.addScatterPlot("gaussian data", x, y);
+        plot.addScatterPlot("gaussian data", x, y, z);
         return plot;
     }
 
